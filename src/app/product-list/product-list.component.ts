@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 import { products } from '../products';
 
@@ -9,6 +10,9 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  closeResult: string;
+
+  constructor(private modalService: NgbModal) {}
 
   share() {
     window.alert('The product has been shared!');
