@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import {NgbModal, ModalDismissReasons, NgbDate, NgbModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 import { products } from '../products';
@@ -6,13 +7,14 @@ import { products } from '../products';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
   products = products;
   closeResult: string;
+  model;
 
-  constructor(private modalService: NgbModal) {}
+  //constructor(private modalService: NgbModal) {}
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -40,6 +42,8 @@ export class ProductListComponent {
     }
   }
 }
+
+
 
 
 /*
