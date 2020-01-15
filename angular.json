@@ -26,11 +26,6 @@
               "src/styles.css",
               "src/styles.scss"
             ],
-            "stylePreprocessorOptions": {
-                "includePaths": [
-                    "node_modules/bootstrap/scss"
-                ]
-            },
             "scripts": []
           },
           "configurations": {
