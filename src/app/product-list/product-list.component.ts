@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-//import {NgbModal, ModalDismissReasons, NgbDate, NgbModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder } from '@angular/forms';
 
 import { products } from '../products';
 
@@ -8,13 +8,24 @@ import { products } from '../products';
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
+  providers: [NgbModal],
 })
 export class ProductListComponent {
   products = products;
   closeResult: string;
   model;
+  formGroupModal;
+ 
 
-  //constructor(private modalService: NgbModal) {}
+  constructor(
+    public modalService: NgbModal,
+    private formBuilder: FormBuilder,
+    //public activeModal: NgbActiveModal,
+  ) {
+      this.formGroupModal = this.formBuilder.group({
+      dateOfBirth: '',
+    });
+  }
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
