@@ -21,7 +21,7 @@ export class PresenceService {
   }
 
   getPresences() {
-    return this.http.get('/assets/shipping.json');
+    return this.http.get('/assets/presences.json');
   }
 
   constructor(
