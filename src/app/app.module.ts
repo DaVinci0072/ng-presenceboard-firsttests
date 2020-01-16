@@ -19,32 +19,36 @@ import { PresenceListComponent } from './presence-list/presence-list.component';
 
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: PresenceListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent },
-    ]),
-    NgbModule
-  ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent,
-    LaunchModalComponent,
-    PresenceListComponent
-  ],
-  //exports: [ProductListComponent],
-  bootstrap: [AppComponent],
-  providers: [CartService, PresenceService]
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      ReactiveFormsModule,
+      RouterModule.forRoot([
+        { path: '', component: PresenceListComponent },
+        { path: 'products/:productId', component: ProductDetailsComponent },
+        { path: 'cart', component: CartComponent },
+        { path: 'shipping', component: ShippingComponent },
+      ]),
+      NgbModule
+    ],
+   declarations: [
+      AppComponent,
+      TopBarComponent,
+      ProductListComponent,
+      ProductAlertsComponent,
+      ProductDetailsComponent,
+      CartComponent,
+      ShippingComponent,
+      LaunchModalComponent,
+      PresenceListComponent
+   ],
+   bootstrap: [
+      AppComponent
+   ],
+   providers: [
+      CartService,
+      PresenceService
+   ]
 })
 export class AppModule { }
 
