@@ -14,6 +14,8 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { LaunchModalComponent } from './launch-modal/launch-modal.component';
+import { PresenceService } from './presence.service';
+import { PresenceListComponent } from './presence-list/presence-list.component';
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import { LaunchModalComponent } from './launch-modal/launch-modal.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: PresenceListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
@@ -37,11 +39,12 @@ import { LaunchModalComponent } from './launch-modal/launch-modal.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    LaunchModalComponent
+    LaunchModalComponent,
+    PresenceListComponent
   ],
   exports: [ProductListComponent],
   bootstrap: [AppComponent],
-  providers: [CartService]
+  providers: [CartService, PresenceService]
 })
 export class AppModule { }
 

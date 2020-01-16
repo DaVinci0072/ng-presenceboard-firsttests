@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import { menuitems } from './menuitems.mock';
+
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
-
+  menuitems: any[] = menuitems;
+  isCollapsed = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleMenu(){
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }
