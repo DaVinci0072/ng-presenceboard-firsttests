@@ -42,7 +42,7 @@ import { PresenceListComponent } from './presence-list/presence-list.component';
     LaunchModalComponent,
     PresenceListComponent
   ],
-  exports: [ProductListComponent],
+  //exports: [ProductListComponent],
   bootstrap: [AppComponent],
   providers: [CartService, PresenceService]
 })
