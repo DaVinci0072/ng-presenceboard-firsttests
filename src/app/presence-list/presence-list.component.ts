@@ -11,9 +11,7 @@ export class PresenceListComponent implements OnInit {
 
   constructor(
     private presenceService: PresenceService
-  ) {
-    
-   }
+  ) { }
 
   ngOnInit() {
     this.items = this.presenceService.getPresences();
