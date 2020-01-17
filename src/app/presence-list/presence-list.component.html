@@ -1,6 +1,10 @@
 <h3>Presences List</h3>
 
-<div *ngFor="let item of items  | async">
-  <span>{{ item.name }}</span>
-  <span>{{ item.status }}</span>
+<div class="container">
+  <div class="row" *ngFor="let item of items | async">
+    <div class="col-8 border">{{ item.name }}</div>
+    <div class="col-2 border">{{ item.status }}</div>
+    <div class="col-2 border">{{ item.status }}</div>
+    <!-- div class="col-2 border">....</!-- div -->
+  </div>
 </div>
