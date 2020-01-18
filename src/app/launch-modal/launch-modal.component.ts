@@ -14,7 +14,7 @@ export class LaunchModalComponent implements OnInit {
   constructor(
       private modalService: NgbModal,
       private formBuilder: FormBuilder
-    ) { 
+    ) {
       this.formGroupModal = this.formBuilder.group({
       dateOfBirth: '',
       });

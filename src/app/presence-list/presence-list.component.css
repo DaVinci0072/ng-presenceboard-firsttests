@@ -1,5 +1,14 @@
-/*.container, .container div{
-  border:1px solid black;
-}*/
+.presences-list{
+  border:2px solid black;
+}
 
+.presences-list > .row > div {
+  border:2px solid black !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
+.presences-header > div {
+  font-size: 18px;
+  font-weight: bold;
+}
